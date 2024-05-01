@@ -3,10 +3,14 @@ const sequelize = require('./utils/conn')
 const app = express();
 const port = 3000;
 
+const {User} = require('./models')
+
 
 app.get('/', (req, res) => {
     res.send('ini di server')
 })
+
+
 
 app.get('/test', async (req, res) => {
     try {
