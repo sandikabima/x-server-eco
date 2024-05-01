@@ -11,9 +11,9 @@ app.get('/', (req, res) => {
 app.get('/test', async (req, res) => {
     try {
         await sequelize.authenticate();
-        res.send('Connection has been established successfully.');
+        res.status(200).json({message :'berhasil'})
       } catch (error) {
-        res.send('Unable to connect to the database:', error);
+        res.status(404).json({message :'gagal'})
       }
 })
 
